@@ -68,6 +68,7 @@
 
   <section class="doctor">
     <div class="container doctor__container">
+      <img src="images/about-tooth.png" alt="Tooth" class="about__tooth">
       <h2>ДАВАЙТЕ ЗНАЙОМИТИСЬ</h2>
       <div class="about__bg-bar"></div>
       <div class="about__bg-bar about__bg-bar--second"></div>
@@ -344,6 +345,7 @@
         <p>МИ ВІДПОВІМО ВАМ ЯКОГОМОГА СКОРІШЕ!</p>
         <form>
           <input type="text" placeholder="Ваше ім'я" required>
+          <input type="text" placeholder="Прізвище" required>
           <input type="text" placeholder="По батькові" required>
           <input type="tel" placeholder="+38" required>
           <button type="submit">Записатися до нас</button>
@@ -544,6 +546,7 @@
   // Form submission functionality
   const signupForm = document.querySelector('#signup-modal form');
   const nameInput = signupForm.querySelector('input[type="text"]');
+  const lastNameInput = signupForm.querySelector('input[type="text"][placeholder="Прізвище"]');
   const patronymicInput = signupForm.querySelector('input[type="text"][placeholder="По батькові"]');
   const phoneInput = signupForm.querySelector('input[type="tel"]');
   const submitButton = signupForm.querySelector('button[type="submit"]');
@@ -553,11 +556,12 @@
     
     // Get form data
     const name = nameInput.value.trim();
+    const lastName = lastNameInput.value.trim();
     const patronymic = patronymicInput.value.trim();
     const phone = phoneInput.value.trim();
     
     // Basic validation
-    if (!name || !patronymic || !phone) {
+    if (!name || !lastName || !patronymic || !phone) {
       alert('Будь ласка, заповніть всі поля');
       return;
     }
@@ -576,6 +580,7 @@
         },
         body: JSON.stringify({
           name: name,
+          lastName: lastName,
           patronymic: patronymic,
           phone: phone,
           message: 'Заявка з сайту'
@@ -643,6 +648,37 @@
 		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
 	}
 	// ]]>
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  let hasAnimatedServices = false;
+  const servicesSection = document.querySelector('.services');
+  const serviceCards = document.querySelectorAll('.service-card-group');
+
+  function isInViewport(element) {
+    const rect = element.getBoundingClientRect();
+    return (
+      rect.top < window.innerHeight - 100 &&
+      rect.bottom > 0
+    );
+  }
+
+  function animateServices() {
+    if (hasAnimatedServices) return;
+    if (isInViewport(servicesSection)) {
+      hasAnimatedServices = true;
+      serviceCards.forEach((card, i) => {
+        setTimeout(() => {
+          card.classList.add('slide-in');
+        }, i * 300);
+      });
+      window.removeEventListener('scroll', animateServices);
+    }
+  }
+
+  window.addEventListener('scroll', animateServices);
+  animateServices();
+});
 </script>
 </body>
 </html>
