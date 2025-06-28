@@ -17,13 +17,13 @@ const bot = new TelegramBot(process.env.TELEGRAM_BOT_TOKEN, { polling: false });
 // Form submission endpoint
 app.post('/submit-form', async (req, res) => {
   try {
-    const { name, phone, message } = req.body;
+    const { name, patronymic, phone, message } = req.body;
     
     // Validate required fields
-    if (!name || !phone) {
+    if (!name || !patronymic || !phone) {
       return res.status(400).json({ 
         success: false, 
-        message: 'Ім\'я та телефон обов\'язкові' 
+        message: 'Ім\'я, по батькові та телефон обов\'язкові' 
       });
     }
 
@@ -32,6 +32,7 @@ app.post('/submit-form', async (req, res) => {
 🦷 *НОВА ЗАЯВКА З САЙТУ*
 
 👤 *Ім'я:* ${name}
+👤 *По батькові:* ${patronymic}
 📞 *Телефон:* ${phone}
 ${message ? `💬 *Повідомлення:* ${message}` : ''}
 

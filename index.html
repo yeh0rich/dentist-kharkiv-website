@@ -344,6 +344,7 @@
         <p>МИ ВІДПОВІМО ВАМ ЯКОГОМОГА СКОРІШЕ!</p>
         <form>
           <input type="text" placeholder="Ваше ім'я" required>
+          <input type="text" placeholder="По батькові" required>
           <input type="tel" placeholder="+38" required>
           <button type="submit">Записатися до нас</button>
         </form>
@@ -543,6 +544,7 @@
   // Form submission functionality
   const signupForm = document.querySelector('#signup-modal form');
   const nameInput = signupForm.querySelector('input[type="text"]');
+  const patronymicInput = signupForm.querySelector('input[type="text"][placeholder="По батькові"]');
   const phoneInput = signupForm.querySelector('input[type="tel"]');
   const submitButton = signupForm.querySelector('button[type="submit"]');
 
@@ -551,10 +553,11 @@
     
     // Get form data
     const name = nameInput.value.trim();
+    const patronymic = patronymicInput.value.trim();
     const phone = phoneInput.value.trim();
     
     // Basic validation
-    if (!name || !phone) {
+    if (!name || !patronymic || !phone) {
       alert('Будь ласка, заповніть всі поля');
       return;
     }
@@ -573,6 +576,7 @@
         },
         body: JSON.stringify({
           name: name,
+          patronymic: patronymic,
           phone: phone,
           message: 'Заявка з сайту'
         })
