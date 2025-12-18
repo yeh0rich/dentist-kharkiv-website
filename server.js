@@ -38,7 +38,7 @@ app.post('/submit-form', async (req, res) => {
 ${message ? `💬 *Повідомлення:* ${message}` : ''}
 
 ⏰ *Час:* ${new Date().toLocaleString('uk-UA')}
-🌐 *Джерело:* dentist-kharkiv.com
+🌐 *Джерело:* kharkivdentist.com
     `;
 
     // Send to Telegram
