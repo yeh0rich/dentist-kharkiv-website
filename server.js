@@ -23,7 +23,7 @@ app.post('/submit-form', async (req, res) => {
     if (!name || !lastName || !phone) {
       return res.status(400).json({ 
         success: false, 
-        message: 'Ім\'я та прізвище і телефон обов\'язкові' 
+        message: 'Ім\'я та по батькові, Прізвище та Телефон обов\'язкові' 
       });
     }
 
