@@ -372,9 +372,8 @@
         <h2>ЗАЛИШТЕ ВАШІ ДАННІ</h2>
         <p>МИ ВІДПОВІМО ВАМ ЯКОГОМОГА СКОРІШЕ!</p>
         <form>
+          <input type="text" placeholder="Ім'я та по батькові" required>
           <input type="text" placeholder="Прізвище" required>
-          <input type="text" placeholder="Ім'я" required>
-          <input type="text" placeholder="По батькові" required>
           <input type="tel" placeholder="+38" required>
           <button type="submit">Записатися до нас</button>
         </form>
@@ -865,10 +864,9 @@
 
   // Form submission functionality
   const signupForm = document.querySelector('#signup-modal form');
-  // Map each field explicitly by its placeholder so first name and surname are not mixed up
+  // Two fields: full name (ім'я + по батькові) and surname
+  const fullNameInput = signupForm.querySelector('input[type="text"][placeholder="Ім\'я та по батькові"]');
   const lastNameInput = signupForm.querySelector('input[type="text"][placeholder="Прізвище"]');
-  const nameInput = signupForm.querySelector('input[type="text"][placeholder="Ім\'я"]');
-  const patronymicInput = signupForm.querySelector('input[type="text"][placeholder="По батькові"]');
   const phoneInput = signupForm.querySelector('input[type="tel"]');
   const submitButton = signupForm.querySelector('button[type="submit"]');
 
@@ -876,13 +874,12 @@
     e.preventDefault();
     
     // Get form data
-    const name = nameInput.value.trim();
+    const name = fullNameInput.value.trim();
     const lastName = lastNameInput.value.trim();
-    const patronymic = patronymicInput.value.trim();
     const phone = phoneInput.value.trim();
     
     // Basic validation
-    if (!name || !lastName || !patronymic || !phone) {
+    if (!name || !lastName || !phone) {
       alert('Будь ласка, заповніть всі поля');
       return;
     }
@@ -900,9 +897,8 @@
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          name: name,
-          lastName: lastName,
-          patronymic: patronymic,
+          name: name,          // Ім'я та по батькові
+          lastName: lastName,  // Прізвище
           phone: phone,
           message: 'Заявка з сайту'
         })

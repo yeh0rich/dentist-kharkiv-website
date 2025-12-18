@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ортопедія | Kharkiv Dentist</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <meta name="description" content="Ортопедичне лікування у Харкові. Протезування, коронки, вініри. Відновлення функції та естетики зубів.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Nunito:wght@400;700;900&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+    <div class="container header__container">
+      <a href="index.html#hero" class="header__logo" style="text-decoration:none; color:inherit; cursor:pointer;">
+        <img src="images/logo.png" alt="Kharkiv Dentist Logo">
+        <span>KHARKIV DENTIST</span>
+      </a>
+      <button class="header__hamburger mobile-only" id="header-hamburger" aria-label="Відкрити меню" style="left: 0; right: auto; position: absolute; display: none;">
+        <span class="burger-icon" aria-hidden="true">
+          <span class="burger-bar"></span>
+          <span class="burger-bar"></span>
+          <span class="burger-bar"></span>
+        </span>
+      </button>
+      <button class="header__hamburger mobile-only" id="header-signup-hamburger" aria-label="Записатися" style="right: 0; left: auto; position: absolute; display: none;">
+        <img src="images/sign-up.svg" alt="Sign Up" />
+      </button>
+      <nav class="header__nav">
+        <a href="index.html#about">Про Стоматологію</a>
+        <a href="index.html#services">Послуги</a>
+        <a href="index.html#reviews">Відгуки</a>
+        <a href="#" id="contacts-nav-btn">Наші Контакти</a>
+      </nav>
+      <a href="#signup" class="header__cta signup-btn">Записатися 
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#fff" viewBox="0 0 256 256" class="btn__icon" aria-hidden="true"><path d="M230.15,70.54,185.46,25.86a20,20,0,0,0-28.28,0L33.86,149.17A19.86,19.86,0,0,0,28,163.31V208a20,20,0,0,0,20,20H92.69a19.85,19.85,0,0,0,14.14-5.86l79.46-79.45,4.16,13.89-34.93,34.93a12,12,0,0,0,17,17l40-40a12,12,0,0,0,3-11.94l-9.94-33.13,24.59-24.59A20,20,0,0,0,230.15,70.54ZM65,152l71-71,39,39-71,71ZM52,173l31,31H52ZM192,103,153,64l18.34-18.34,39,39Z"></path></svg>
+      </a>
+    </div>
+  </header>
+  <main>
+    <section class="service-hero">
+      <div class="container">
+        <div class="service-important">
+          <div class="container">
+            <h3>ВАЖЛИВО</h3>
+            <p>Перед будь-яким стоматологічним лікуванням важливо пройти <b>ДІАГНОСТИКУ</b>. Лікар огляне вашу ротову порожнину, визначить справжню причину проблеми та підбере оптимальний план лікування.<br><b>САМОЛІКУВАННЯ АБО ВИБІР ПРОЦЕДУРИ БЕЗ ПРОФЕСІЙНОЇ ПОРАДИ МОЖЕ ПРИЗВЕСТИ ДО УСКЛАДНЕНЬ І НАШКОДИТИ ВАШОМУ ЗДОРОВ'Ю.</b></p>
+          </div>
+        </div>
+        <h1 class="service-title"><span class="service-title-icon-circle"><span class="service-title-icon">
+<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" style="height:1em;width:1em;display:inline-block;vertical-align:middle;" fill="currentColor">
+  <g>
+    <path d="M372.375,124.154c-18.606-13.446-37.399-17.981-53.561-17.907c-12.69,0.009-23.767,2.566-32.641,4.88c-4.433,1.157-8.324,2.24-11.468,2.986c-3.126,0.756-5.515,1.064-6.523,1.055c-1.017,0.009-3.406-0.299-6.541-1.055c-9.537-2.165-25.129-7.828-44.091-7.866c-16.162-0.074-34.964,4.451-53.561,17.907c-13.895,9.947-23.796,23.328-29.991,38.109c-6.215,14.799-8.893,31.008-8.893,47.43c0.103,37.951,13.978,77.376,36.159,106.004c16.301,20.92,37.988,31.801,57.733,37.297c19.801,5.516,38.109,5.954,49.185,5.963c11.076-0.009,29.376-0.447,49.167-5.963c19.763-5.496,41.449-16.376,57.751-37.297c22.171-28.619,36.048-68.054,36.159-106.004c-0.01-16.422-2.688-32.631-8.902-47.44C396.161,147.482,386.261,134.1,372.375,124.154z M354.889,299.955c-12.103,15.518-28.19,23.804-44.426,28.358c-16.181,4.545-32.082,5.039-42.281,5.03c-10.218,0.009-26.109-0.485-42.289-5.03c-16.228-4.554-32.324-12.84-44.436-28.358c-18.392-23.421-30.849-58.759-30.747-90.262c0-13.642,2.258-26.491,6.896-37.502c4.656-11.02,11.543-20.192,21.322-27.229c14.473-10.321,26.884-13.027,38.622-13.101c9.191,0,17.944,1.885,26.175,4.05c4.124,1.064,8.09,2.202,12.056,3.135c3.985,0.914,7.922,1.708,12.401,1.726c4.47-0.018,8.417-0.811,12.392-1.726c11.767-2.855,24.401-7.223,38.24-7.186c11.729,0.074,24.139,2.8,38.622,13.101c9.769,7.036,16.647,16.209,21.312,27.229c4.638,10.992,6.906,23.86,6.886,37.502C385.748,241.196,373.281,276.534,354.889,299.955z"/>
+    <polygon points="223.391,370.948 212.726,370.948 223.391,399.792 314.046,399.792 324.72,370.948 314.046,370.948 "/>
+    <polygon points="238.667,512 299.684,512 306.87,492.591 231.491,492.591 "/>
+    <polygon points="227.246,411.436 217.495,424.622 227.246,437.817 310.183,437.817 319.943,424.622 310.183,411.436 "/>
+    <polygon points="227.246,450.712 217.495,463.888 227.246,477.064 310.183,477.064 319.943,463.888 310.183,450.712 "/>
+    <path d="M448.752,49.558l-36.234-9.601c-0.942-0.205-1.717-0.971-1.922-1.922l-9.555-36.224C400.79,0.756,399.856,0,398.765,0c-1.092,0-2.026,0.756-2.277,1.811l-9.555,36.224c-0.215,0.952-0.98,1.717-1.932,1.922l-36.224,9.601c-1.064,0.215-1.81,1.148-1.81,2.24c0,1.092,0.746,2.034,1.81,2.24l36.224,9.602c0.952,0.196,1.717,0.97,1.932,1.922l9.555,36.224c0.251,1.064,1.185,1.81,2.277,1.81c1.091,0,2.025-0.746,2.276-1.81l9.555-36.224c0.206-0.952,0.98-1.726,1.922-1.922l36.234-9.602c1.055-0.206,1.811-1.148,1.811-2.24C450.563,50.707,449.807,49.773,448.752,49.558z"/>
+    <path d="M279.258,208.528l-33.089-8.772c-0.868-0.186-1.567-0.877-1.754-1.754l-8.724-33.08c-0.234-0.961-1.083-1.652-2.081-1.652c-0.999,0-1.848,0.691-2.081,1.652l-8.715,33.08c-0.206,0.877-0.896,1.568-1.764,1.754l-33.089,8.772c-0.97,0.186-1.651,1.054-1.651,2.043c0,0.998,0.682,1.858,1.651,2.044l33.089,8.772c0.868,0.186,1.558,0.886,1.764,1.754l8.715,33.089c0.233,0.97,1.082,1.642,2.081,1.642c0.998,0,1.847-0.672,2.081-1.642l8.724-33.089c0.188-0.868,0.887-1.568,1.754-1.754l33.089-8.772c0.961-0.186,1.652-1.046,1.652-2.044C280.91,209.582,280.219,208.714,279.258,208.528z"/>
+    <path d="M141.65,91.186c0-0.84-0.57-1.577-1.4-1.735l-28.05-7.438c-0.727-0.158-1.334-0.756-1.492-1.483l-7.4-28.05c-0.196-0.821-0.914-1.4-1.764-1.4c-0.84,0-1.568,0.579-1.764,1.4l-7.39,28.05c-0.168,0.727-0.765,1.324-1.494,1.483l-28.049,7.438c-0.83,0.158-1.41,0.895-1.41,1.735c0,0.849,0.579,1.568,1.41,1.735l28.049,7.428c0.728,0.158,1.326,0.756,1.494,1.492l7.39,28.05c0.196,0.821,0.924,1.4,1.764,1.4c0.85,0,1.568-0.579,1.764-1.4l7.4-28.05c0.158-0.737,0.765-1.334,1.492-1.492l28.05-7.428C141.08,92.754,141.65,92.035,141.65,91.186z"/>
+  </g>
+</svg>
+</span></span>Ортопедія</h1>
+        <div class="service-hero-content">
+          <div class="service-image">
+            <img src="images/orthopedics.png" alt="Ортопедичне лікування зубів" style="width: 100%; height: 350px; object-fit: cover; border-radius: 12px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);">
+          </div>
+          <div class="service-subservices">
+            <h3>ПРОТЕЗУВАННЯ ЗУБІВ</h3>
+            <p style="color: black; font-weight: 400;">ЗАМІНА ВІДСУТНІХ АБО ВІДНОВЛЕННЯ ПОШКОДЖЕНИХ ЗУБІВ ЗА ДОПОМОГОЮ РІЗНИХ ВИДІВ ПРОТЕЗІВ:<br>
+            <b>ЗНІМНІ ПРОТЕЗИ</b>: БЮГЕЛЬ<br>
+            <b>НЕЗНІМНІ ПРОТЕЗИ</b>: КОРОНКИ, МОСТИ, ВКЛАДКИ, ВІНІРИ<br>
+            <b>ПРОТЕЗУВАННЯ НА ІМПЛАНТАХ</b><br>
+            <b>СКАНУВАННЯ ЩЕЛЕП (ЦИФРОВІ ВІДБИТКИ ЗУБІВ)</b></p>
+            
+            <h3>ВАЖЛИВО ПАМ'ЯТАТИ</h3>
+            <p style="color: black; font-weight: 400;">ВАЖЛИВО ПАМ'ЯТАТИ, ЩО ЗБЕРЕЖЕННЯ ПРИРОДНИХ ЗУБІВ КРАЩЕ, НІЖ ПРОТЕЗУВАННЯ, ТОМУ ВАЖЛИВО ВЧАСНО ЗВЕРТАТИСЯ ДО СТОМАТОЛОГА ДЛЯ ПРОФІЛАКТИКИ ТА ЛІКУВАННЯ</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="service-benefits">
+      <div class="container">
+        <h2>Переваги</h2>
+        <ul class="service-benefits__list">
+          <li>
+            <div class="advantage-row">
+              <button class="advantage-toggle" aria-expanded="false" aria-controls="advantage-detail-1">+</button>
+              <span class="advantage-text">Сучасні протези та коронки</span>
+            </div>
+            <div class="advantage-detail" id="advantage-detail-1" hidden>Використовуються новітні матеріали для максимальної естетики та функціональності</div>
+          </li>
+          <li>
+            <div class="advantage-row">
+              <button class="advantage-toggle" aria-expanded="false" aria-controls="advantage-detail-2">+</button>
+              <span class="advantage-text">Естетичний результат</span>
+            </div>
+            <div class="advantage-detail" id="advantage-detail-2" hidden>Робота виконується з урахуванням індивідуальних побажань пацієнта</div>
+          </li>
+          <li>
+            <div class="advantage-row">
+              <button class="advantage-toggle" aria-expanded="false" aria-controls="advantage-detail-3">+</button>
+              <span class="advantage-text">Довговічність</span>
+            </div>
+            <div class="advantage-detail" id="advantage-detail-3" hidden>Гарантуємо тривалий термін служби завдяки сучасним технологіям</div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="service-cta">
+      <div class="container">
+        <h2>ГОТОВІ ЗАПИСАТИСЯ?</h2>
+        <p>ЗАЛИШТЕ ЗАЯВКУ І МИ ЗВ'ЯЖЕМОСЯ З ВАМИ НАЙБЛИЖЧИМ ЧАСОМ!</p>
+        <a href="#signup" class="btn service-cta__button signup-btn" style="width:100%;max-width:220px;display:block;margin:0 auto;">Записатися до нас <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 256 256" class="btn__icon" aria-hidden="true"><path fill="currentColor" d="M230.15,70.54,185.46,25.86a20,20,0,0,0-28.28,0L33.86,149.17A19.86,19.86,0,0,0,28,163.31V208a20,20,0,0,0,20,20H92.69a19.85,19.85,0,0,0,14.14-5.86l79.46-79.45,4.16,13.89-34.93,34.93a12,12,0,0,0,17,17l40-40a12,12,0,0,0,3-11.94l-9.94-33.13,24.59-24.59A20,20,0,0,0,230.15,70.54ZM65,152l71-71,39,39-71,71ZM52,173l31,31H52ZM192,103,153,64l18.34-18.34,39,39Z"></path></svg></a>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <img src="images/mobile-logo.png" alt="Mobile Logo" class="mobile-footer-logo mobile-only" />
+    <div class="container footer__container">
+      <div class="footer__col footer__col--logo-nav">
+        <div class="footer__logo-wrapper">
+          <img src="images/under-logo.png" alt="Under Logo" class="footer__under-logo">
+          <img src="images/logo.png" alt="Kharkiv Dentist Logo" class="footer__logo">
+        </div>
+        <div class="footer__copyright-small desktop-only">© 2025 <b>KHARKIV DENTIST</b>. Всі права захищені</div>
+      </div>
+      <div class="footer__col footer__col--nav">
+        <div class="footer__heading">НАВІГАЦІЯ САЙТУ</div>
+        <nav class="footer__nav">
+          <a href="index.html#about" class="mobile-only"><span class="footer__nav-icon"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 256 256" fill="currentColor"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm45.66,85.66-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35a8,8,0,0,1,11.32,11.32Z"></path></svg></span><span class="footer__nav-check mobile-only"><img src='images/check.svg' alt='' /></span>Про Стоматологію</a>
+          <a href="index.html#services" class="mobile-only"><span class="footer__nav-icon"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 256 256" fill="currentColor"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm45.66,85.66-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35a8,8,0,0,1,11.32,11.32Z"></path></svg></span><span class="footer__nav-check mobile-only"><img src='images/check.svg' alt='' /></span>Послуги</a>
+          <a href="index.html#reviews" class="mobile-only"><span class="footer__nav-icon"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 256 256" fill="currentColor"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm45.66,85.66-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35a8,8,0,0,1,11.32,11.32Z"></path></svg></span><span class="footer__nav-check mobile-only"><img src='images/check.svg' alt='' /></span>Відгуки</a>
+        </nav>
+      </div>
+      <div class="footer__col footer__col--contacts">
+        <div class="footer__heading">НАШІ КОНТАКТИ</div>
+        <div class="footer__contacts" id="contacts">
+          <div><span class="footer__contacts-icon"><img src="images/phone.svg" alt="Phone"></span>+380916123458</div>
+          <div class="address-contact"><span class="footer__contacts-icon"><img src="images/location.svg" alt="Location"></span><span class="address-text">вул. Нескорених 34,&nbsp;Харків</span></div>
+          <div><span class="footer__contacts-icon"><img src="images/instagram.svg" alt="Instagram"></span><a href="https://www.instagram.com/kharkivdentist/" target="_blank" rel="noopener noreferrer" class="instagram-link">@kharkivdentist</a></div>
+        </div>
+      </div>
+      <div class="footer__col footer__col--map">
+        <div class="footer__heading">ШУКАЙТЕ НАС НА МАПІ</div>
+        <div class="footer__map-card" style="margin-top: 0;">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13612.375087441227!2d36.336742238730324!3d50.0211307160004!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x412709dc53efe215%3A0x787f202256b9e096!2sKharkiv%20Dentist!5e0!3m2!1sen!2sbg!4v1762517212137!5m2!1sen!2sbg"
+            width="210" height="110" style="border:0; border-radius:12px; box-shadow:0 2px 12px #e91e6322;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Google Map - вул. Нескорених 34, Харків"
+          ></iframe>
+        </div>
+      </div>
+      <div class="footer__copyright-small mobile-only">© 2025 <b>KHARKIV DENTIST</b>. Всі права захищені</div>
+      <button class="yehor-btn" id="yehor-btn" title="Site by Yehor Avramenko">
+        <img src="images/yehor.png" alt="Yehor Avramenko" />
+      </button>
+    </div>
+  </footer>
+
+  <!-- Signup Modal Overlay -->
+  <div id="signup-overlay" class="signup-overlay"></div>
+  <!-- Signup Modal -->
+  <div id="signup-modal" class="signup-modal">
+    <div class="signup-modal__content">
+      <button class="signup-modal__close" aria-label="Закрити">&times;</button>
+      <div class="signup-modal__logo-side" style="margin-bottom: 0;">
+        <img src="images/logo.png" alt="Duduka Dental Clinic" />
+        <span class="signup-modal__logo-text">KHARKIV DENTIST</span>
+      </div>
+      <div class="signup-modal__form-side">
+        <h2>ЗАЛИШТЕ ВАШІ ДАННІ</h2>
+        <p>МИ ВІДПОВІМО ВАМ ЯКОГОМОГА СКОРІШЕ!</p>
+        <form>
+          <input type="text" placeholder="Ім'я та по батькові" required>
+          <input type="text" placeholder="Прізвище" required>
+          <input type="tel" placeholder="+38" required>
+          <button type="submit">Записатися до нас</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contacts Modal and Overlay -->
+  <div id="contacts-overlay" class="contacts-overlay"></div>
+  <div id="contacts-modal" class="contacts-modal">
+    <button class="contacts-modal__close" id="contacts-modal-close" aria-label="Закрити">&times;</button>
+    <div class="contacts-modal__logo-row">
+      <img src="images/logo.png" alt="Kharkiv Dentist Logo" class="contacts-modal__logo">
+      <span class="contacts-modal__logo-text">KHARKIV DENTIST</span>
+    </div>
+    <h2>Наші Контакти</h2>
+    <div class="contacts-modal__info">
+      <div class="contacts-modal__info-row"><span class="icon-circle"><img src="images/phone.svg" class="icon-svg" alt="Phone"></span> +380916123458</div>
+      <div class="contacts-modal__info-row"><span class="icon-circle"><img src="images/location.svg" class="icon-svg" alt="Location"></span> вул. Нескорених 34, Харків</div>
+      <div class="contacts-modal__info-row"><span class="icon-circle"><img src="images/instagram.svg" class="icon-svg" alt="Instagram"></span> <a href="https://www.instagram.com/kharkivdentist/" target="_blank" rel="noopener noreferrer" class="instagram-link">@kharkivdentist</a></div>
+    </div>
+  </div>
+
+  <!-- Yehor Modal and Overlay -->
+  <div id="yehor-overlay" class="yehor-overlay"></div>
+  <div id="yehor-modal" class="yehor-modal">
+    <div class="yehor-modal__content">
+      <button class="yehor-modal__close" id="yehor-modal-close" aria-label="Закрити">&times;</button>
+      <div class="yehor-modal__avatar"><img src="images/yehor.png" alt="Yehor Avramenko" /></div>
+      <div class="yehor-modal__info">
+        <div class="yehor-modal__main">Made by Yehor Avramenko</div>
+        <div class="yehor-modal__love">З любов'ю до Kharkiv Dentist</div>
+        <div class="yehor-modal__sub">Behance – Yehor Avramenko</div>
+        <div class="yehor-modal__sub">Instagram – @yeh0rich</div>
+        <div class="yehor-modal__sub">LinkedIn – www.linkedin.com/in/yeh0rich</div>
+      </div>
+    </div>
+  </div>
+
+  <style>
+  .advantage-toggle {
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #0C83D2;
+    margin-right: 12px;
+    cursor: pointer;
+    vertical-align: middle;
+    transition: transform 0.2s;
+    margin-top: -7px !important;
+  }
+  .advantage-toggle[aria-expanded="true"] {
+    transform: rotate(45deg);
+  }
+  .advantage-detail {
+    margin-top: 8px;
+    margin-left: 32px;
+    font-size: 1em;
+    color: #333;
+    padding: 12px;
+    border-left: 3px solid #0C83D2;
+    background-color: #fff;
+    border-radius: 12px;
+    font-weight: 400;
+  }
+  .service-important {
+    position: relative;
+    left: 50%;
+    right: 50%;
+    width: 100vw;
+    transform: translateX(-50%);
+    background: linear-gradient(135deg, #EC748F 0%, #FFC0CE 100%);
+    border-radius: 0;
+    padding: 24px 0;
+    margin-bottom: 60px;
+    box-sizing: border-box;
+  }
+  @media (max-width: 600px) {
+    .service-important { padding: 16px 0; }
+  }
+  .service-important p { 
+    font-weight: 400; 
+    font-family: 'PT Sans', sans-serif;
+  }
+  .service-important .container { 
+    margin-top: 8px; 
+  }
+  .service-hero {
+    margin-top: 0;
+  }
+  .service-hero-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+    margin: 40px 0;
+  }
+  .service-hero-content:hover .service-image img {
+    transform: scale(1.05);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
+  }
+  .service-image {
+    flex: 0 0 400px;
+  }
+  .service-image img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .big-placeholder-rectangle {
+    width: 100%;
+    height: 350px;
+    background: #e0e0e0;
+    border-radius: 12px;
+  }
+  .service-subservices {
+    flex: 1;
+  }
+  .service-subservices h3 {
+    margin: 0 0 8px 0;
+    color: #333;
+    font-size: 1.1em;
+    text-transform: uppercase;
+  }
+  .service-subservices p {
+    margin: 0 0 20px 0;
+    color: #666;
+    line-height: 1.5;
+    text-transform: uppercase;
+    font-size: 0.9em;
+  }
+  @media (max-width: 768px) {
+    .service-hero-content {
+      flex-direction: column;
+      gap: 24px;
+    }
+    .service-image {
+      flex: none;
+    }
+    .big-placeholder-rectangle {
+      height: 200px;
+    }
+  }
+  .service-title-icon-circle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 1.3em;
+    width: 1.3em;
+    border: 2px solid #0C83D2;
+    border-radius: 50%;
+    margin-right: 0.5em;
+    box-sizing: border-box;
+    background: #fff;
+  }
+  .service-title-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 0.9em;
+    width: 0.9em;
+    color: #0C83D2;
+    margin-left: -2px;
+  }
+  .service-title {
+    margin-top: 40px;
+    color: #0C83D2;
+    display: flex;
+    align-items: center;
+    gap: 0.2em;
+  }
+  .advantage-text {
+    font-family: 'Nunito', Arial, sans-serif;
+    font-weight: 700;
+    font-size: 1.1em;
+    color: #000;
+    text-transform: uppercase;
+    margin-top: 14px;
+  }
+  .service-benefits {
+    padding: 60px 0;
+    background: url('images/adv-bg.png') center/cover no-repeat;
+  }
+  .footer__container {
+    position: relative;
+  }
+  .yehor-btn {
+    position: absolute;
+    right: 32px;
+    bottom: 32px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 2px solid #0C83D2;
+    background: #fff;
+    box-shadow: 0 2px 8px #0C83D222;
+    cursor: pointer;
+    transition: box-shadow 0.2s, transform 0.2s;
+    z-index: 2;
+  }
+  .yehor-btn img {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-left: -3px;
+  }
+  .yehor-btn:hover {
+    box-shadow: 0 4px 16px #0C83D244;
+    transform: scale(1.08);
+  }
+  .yehor-overlay {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.45);
+    z-index: 1001;
+    transition: opacity 0.3s;
+  }
+  .yehor-modal {
+    display: none;
+    position: fixed;
+    left: 0; top: 0; right: 0; bottom: 0;
+    align-items: center;
+    justify-content: center;
+    z-index: 1002;
+    background: none;
+    transition: opacity 0.3s;
+    opacity: 0;
+  }
+  .yehor-modal.open {
+    display: flex;
+    opacity: 1;
+  }
+  .yehor-modal__content {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+    border: 1.5px solid #111;
+    min-width: 320px;
+    max-width: 90vw;
+    padding: 32px 28px 24px 28px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    transform: translateY(32px);
+    opacity: 0;
+    transition: opacity 0.3s, transform 0.3s;
+  }
+  .yehor-modal.open .yehor-modal__content {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .yehor-modal__close {
+    position: absolute;
+    top: 12px;
+    right: 18px;
+    background: none;
+    border: none;
+    font-size: 2em;
+    color: #0C83D2;
+    cursor: pointer;
+    z-index: 2;
+    line-height: 1;
+    transition: color 0.2s;
+  }
+  .yehor-modal__close:hover {
+    color: #111;
+  }
+  .yehor-modal__avatar img {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    border: 2px solid #0C83D2;
+    margin-bottom: 8px;
+    object-fit: cover;
+  }
+  .yehor-modal__main {
+    font-family: 'Nunito', Arial, sans-serif;
+    font-weight: 900;
+    font-size: 1.15em;
+    color: #0C83D2;
+    margin-bottom: 4px;
+    text-align: center;
+  }
+  .yehor-modal__love {
+    font-family: 'Nunito', Arial, sans-serif;
+    font-weight: 700;
+    color: #111;
+    font-size: 1.05em;
+    margin-bottom: 2px;
+    text-align: center;
+  }
+  .yehor-modal__sub {
+    font-family: 'PT Sans', Arial, sans-serif;
+    font-size: 1em;
+    color: #222;
+    margin-bottom: 2px;
+    text-align: center;
+    font-weight: 400;
+  }
+  @media (max-width: 600px) {
+    .yehor-modal {
+      min-width: 0;
+      width: 95vw;
+      padding: 18px 6vw 18px 6vw;
+    }
+    .yehor-modal__avatar img {
+      width: 48px; height: 48px;
+    }
+  }
+  .footer__map-card {
+    transition: box-shadow 0.3s, transform 0.3s;
+  }
+  .footer__map-card:hover {
+    transform: translateY(-8px) scale(1.04);
+    box-shadow: 0 8px 32px rgba(12,131,210,0.18), 0 2px 12px #e91e6322;
+    z-index: 1;
+  }
+  @media (max-width: 900px) {
+    .service-hero-content,
+    .service-title,
+    .service-description,
+    .service-benefits,
+    .service-cta,
+    .service-important,
+    .service-important h3,
+    .service-important p,
+    .service-benefits,
+    .service-benefits h2,
+    .advantage-title,
+    .service-subservices,
+    .placeholder-text,
+    .service-benefits__list,
+    .service-benefits__list li,
+    .service-content,
+    .service-content p,
+    .service-content h2,
+    .service-content h3,
+    .service-content h4,
+    .service-content h5,
+    .service-content h6 {
+      text-align: left !important;
+      align-items: flex-start !important;
+    }
+  }
+  </style>
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Signup Modal logic
+    document.querySelectorAll('.signup-btn').forEach(btn => {
+      btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.getElementById('signup-modal').classList.add('active');
+        document.getElementById('signup-overlay').style.display = 'block';
+      });
+    });
+    document.querySelector('.signup-modal__close').onclick = function() {
+      document.getElementById('signup-modal').classList.remove('active');
+      document.getElementById('signup-overlay').style.display = 'none';
+    };
+    document.getElementById('signup-overlay').onclick = function() {
+      document.getElementById('signup-modal').classList.remove('active');
+      this.style.display = 'none';
+    };
+    document.getElementById('signup-modal').onclick = function(e) {
+      if (e.target === this) {
+        this.classList.remove('active');
+        document.getElementById('signup-overlay').style.display = 'none';
+      }
+    };
+
+    // Signup form logic (2 fields: full name and surname)
+    const signupForm = document.querySelector('#signup-modal form');
+    const fullNameInput = signupForm.querySelector('input[type="text"][placeholder="Ім\'я та по батькові"]') || signupForm.querySelector('input[type="text"]');
+    const lastNameInput = signupForm.querySelector('input[type="text"][placeholder="Прізвище"]');
+    const phoneInput = signupForm.querySelector('input[type="tel"]');
+    const submitButton = signupForm.querySelector('button[type="submit"]');
+    signupForm.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const name = fullNameInput.value.trim();
+      const lastName = lastNameInput.value.trim();
+      const phone = phoneInput.value.trim();
+      if (!name || !lastName || !phone) {
+        alert('Будь ласка, заповніть всі поля');
+        return;
+      }
+      const originalButtonText = submitButton.textContent;
+      submitButton.textContent = 'Відправляємо...';
+      submitButton.disabled = true;
+      try {
+        const response = await fetch('https://dentist-kharkiv-backend.onrender.com/submit-form', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            name: name,         // Ім'я та по батькові
+            lastName: lastName, // Прізвище
+            phone: phone,
+            message: 'Заявка з сайту'
+          })
+        });
+        const result = await response.json();
+        if (result.success) {
+          alert('Дякуємо! Ми зв\'яжемося з вами найближчим часом.');
+          signupForm.reset();
+          document.getElementById('signup-modal').classList.remove('active');
+          document.getElementById('signup-overlay').style.display = 'none';
+        } else {
+          alert('Помилка відправки: ' + result.message);
+        }
+      } catch (error) {
+        console.error('Error submitting form:', error);
+        alert('Помилка відправки. Спробуйте ще раз.');
+      } finally {
+        submitButton.textContent = originalButtonText;
+        submitButton.disabled = false;
+      }
+    });
+
+    // Contacts Modal logic
+    const contactsNav = document.getElementById('contacts-nav-btn');
+    const contactsOverlay = document.getElementById('contacts-overlay');
+    const contactsModal = document.getElementById('contacts-modal');
+    const contactsClose = document.getElementById('contacts-modal-close');
+    if (contactsNav && contactsOverlay && contactsModal && contactsClose) {
+      contactsNav.addEventListener('click', function(e) {
+        e.preventDefault();
+        contactsOverlay.style.display = 'block';
+        contactsModal.style.display = 'flex';
+        setTimeout(() => contactsModal.classList.add('open'), 10);
+        document.body.style.overflow = 'hidden';
+      });
+      function closeContactsModal() {
+        contactsOverlay.style.display = 'none';
+        contactsModal.classList.remove('open');
+        setTimeout(() => { contactsModal.style.display = 'none'; }, 400);
+        document.body.style.overflow = '';
+      }
+      contactsOverlay.addEventListener('click', closeContactsModal);
+      contactsClose.addEventListener('click', closeContactsModal);
+      contactsModal.addEventListener('mousedown', function(e) {
+        if (!contactsClose.contains(e.target) && !contactsModal.contains(e.target)) {
+          closeContactsModal();
+        }
+      });
+    }
+
+    // Smooth scroll for top bar navigation and close burger menu
+    document.querySelectorAll('.header__nav a, .footer__nav a').forEach(link => {
+      link.addEventListener('click', function(e) {
+        const href = this.getAttribute('href');
+        // Only smooth scroll if link is an in-page anchor (starts with # and not index.html#)
+        if (href && href.startsWith('#')) {
+          const target = document.querySelector(href);
+          if (target) {
+            e.preventDefault();
+            window.scrollTo({
+              top: target.getBoundingClientRect().top + window.pageYOffset - 60,
+              behavior: 'smooth'
+            });
+            // Close burger menu on mobile
+            const header = document.querySelector('.header');
+            if (header) header.classList.remove('nav-open');
+          }
+        }
+        // If link is to index.html#section, let browser handle navigation
+      });
+    });
+
+    // Yehor Modal logic
+    const yehorBtn = document.getElementById('yehor-btn');
+    const yehorOverlay = document.getElementById('yehor-overlay');
+    const yehorModal = document.getElementById('yehor-modal');
+    const yehorClose = document.getElementById('yehor-modal-close');
+    const yehorModalContent = document.querySelector('.yehor-modal__content');
+    if (yehorBtn && yehorOverlay && yehorModal && yehorClose && yehorModalContent) {
+      yehorBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        yehorOverlay.style.display = 'block';
+        yehorModal.style.display = 'flex';
+        setTimeout(() => yehorModal.classList.add('open'), 10);
+        document.body.style.overflow = 'hidden';
+      });
+      function closeYehorModal() {
+        yehorOverlay.style.display = 'none';
+        yehorModal.classList.remove('open');
+        setTimeout(() => { yehorModal.style.display = 'none'; }, 400);
+        document.body.style.overflow = '';
+      }
+      yehorOverlay.addEventListener('click', closeYehorModal);
+      yehorClose.addEventListener('click', closeYehorModal);
+      yehorModal.addEventListener('mousedown', function(e) {
+        if (!yehorModalContent.contains(e.target)) {
+          closeYehorModal();
+        }
+      });
+    }
+
+    // Burger menu open/close
+    const hamburger = document.getElementById('header-hamburger');
+    const header = document.querySelector('.header');
+    if (hamburger && header) {
+      hamburger.addEventListener('click', function() {
+        header.classList.toggle('nav-open');
+      });
+      document.querySelectorAll('.header__nav a').forEach(link => {
+        link.addEventListener('click', function() {
+          header.classList.remove('nav-open');
+        });
+      });
+    }
+
+    // Signup hamburger logic (right)
+    const signupHamburger = document.getElementById('header-signup-hamburger');
+    if (signupHamburger) {
+      signupHamburger.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.getElementById('signup-modal').classList.add('active');
+        document.getElementById('signup-overlay').style.display = 'block';
+      });
+    }
+
+    // Restore plus/expand/collapse for advantages
+    document.querySelectorAll('.advantage-toggle').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        const detail = document.getElementById(btn.getAttribute('aria-controls'));
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', !expanded);
+        if (detail) {
+          detail.hidden = expanded;
+        }
+      });
+    });
+  });
+  </script>
+</body>
+</html> 
