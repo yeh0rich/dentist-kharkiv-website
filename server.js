@@ -36,7 +36,7 @@ app.post('/submit-form', async (req, res) => {
 📞 *Телефон:* ${phone}
 ${message ? `💬 *Повідомлення:* ${message}` : ''}
 
-⏰ *Час:* ${new Date().toLocaleString('uk-UA')}
+⏰ *Час:* ${new Date().toLocaleString('uk-UA', { timeZone: 'Europe/Kyiv' })}
 🌐 *Джерело:* kharkivdentist.com
     `;
 
